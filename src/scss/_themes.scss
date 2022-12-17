@@ -1,0 +1,28 @@
+$themes: (
+  "light": (
+    "colors": (
+      "colorBackground": $color-white,
+      "colorText": $color-black,
+      "colorPrimary": $color-green,
+      "colorBorder": $color-grey,
+    ),
+  ),
+  "dark": (
+    "colors": (
+      "colorBackground": $color-black,
+      "colorText": $color-white,
+      "colorPrimary": $color-green,      
+      "colorBorder": $color-darkGrey,
+    ),
+  ),
+);
+
+@each $theme-name, $theme-vars in $themes {
+  $colors: map-get($theme-vars, "colors");
+
+  body.#{$theme-name} {
+    @each $name, $color in $colors {
+      --#{$name}: #{$color};
+    }
+  }
+}

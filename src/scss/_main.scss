@@ -1,0 +1,18 @@
+html {
+    font-size: 16px;
+
+    @media screen and(max-width: 767px) {
+        font-size: 14px;
+    }
+
+    @media screen and(max-width: 480px) {
+        font-size: 12px;
+    }
+}
+
+body {
+    background-color: var(--colorBackground);
+    color: var(--colorText);
+    transition: color, background-color, 0.6s ease;
+}
+
