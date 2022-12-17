@@ -1,19 +1,21 @@
-import { ContentContainer } from "../content-container/content-container";
-import { Footer } from "../footer/footer";
-import { Header } from "../header/header";
+import { Routes, Route, Navigate } from "react-router-dom";
+import { Layout } from "../common";
+import { Books, About, Rules, Page404 } from "../pages";
 
 const App = () => {
   return (
     <div className="app">
-      <Header />
-      <ContentContainer>
-        <>First</>
-        <>Second</>
-        <>Third</>
-      </ContentContainer>
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Navigate to="books" replace />} />          
+          <Route path="/books" element={<Books />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/rules" element={<Rules />} />
+          <Route path="*" element={<Page404 />} />
+        </Route>
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;
