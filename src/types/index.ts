@@ -1,1 +1,1 @@
-export {}
+export type TTheme = "DARK" | "LIGHT";
