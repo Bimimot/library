@@ -10,4 +10,33 @@
     transition: color, background-color, 0.6s ease;
     z-index: 500;
     border-bottom: 1px solid var(--colorBorder);
+
+    &__nav {
+        display: flex;
+        position: relative;
+        gap: 1rem;
+    }
+
+    &__list {
+        display: flex;
+        position: relative;
+        list-style-type: none;
+        gap: 1rem;
+    }
+
+    &__point {
+        font-size: 1rem;
+        text-decoration: none;
+        color: var(--colorText);
+        transition: all .3s ease;
+        
+        &_active_on {
+            border-bottom: 2px solid $color-green;
+        }
+
+        &:hover {
+            cursor: pointer;
+            color: $color-green;
+        }
+    }
 }

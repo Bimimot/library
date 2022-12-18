@@ -2,23 +2,28 @@ import { FC } from "react";
 import { NavLink } from "react-router-dom";
 import { Slider } from "../";
 import StyleTheme from "../../../helpers/StyleTheme";
+import { pages } from "../../../data/composition";
 
 const styleTheme = new StyleTheme("LIGHT");
 
 export const Header: FC = () => {
   return (
     <div className="header">
-      <nav>
-        <ul>
-          <li>
-            <NavLink to="/about">О проекте</NavLink>
-          </li>
-          <li>
-            <NavLink to="/books">Книги</NavLink>
-          </li>
-          <li>
-            <NavLink to="/rules">Правила и стоимость </NavLink>
-          </li>
+      <nav className="header__nav">
+        <ul className="header__list">
+          {pages.map((item, i) => (
+            <li className="header__point">
+              <NavLink
+                className={({ isActive }) =>
+                  `header__point ${isActive && "header__point_active_on"}`
+                }
+                key={i}
+                to={`/${item.link}`}
+              >
+                {item.text}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </nav>
       <Slider
