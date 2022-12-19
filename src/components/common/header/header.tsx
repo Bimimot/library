@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { NavLink } from "react-router-dom";
-import { Slider } from "../";
+import { Slider } from "./slider";
 import StyleTheme from "../../../helpers/StyleTheme";
 import { pages } from "../../../data/composition";
 
@@ -12,12 +12,11 @@ export const Header: FC = () => {
       <nav className="header__nav">
         <ul className="header__list">
           {pages.map((item, i) => (
-            <li className="">
+            <li className="" key={i}>
               <NavLink
                 className={({ isActive }) =>
                   `header__point ${isActive && "header__point_active_on"}`
                 }
-                key={i}
                 to={`/${item.link}`}
               >
                 {item.text.toUpperCase()}
