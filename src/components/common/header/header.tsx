@@ -12,7 +12,7 @@ export const Header: FC = () => {
       <nav className="header__nav">
         <ul className="header__list">
           {pages.map((item, i) => (
-            <li className="header__point">
+            <li className="">
               <NavLink
                 className={({ isActive }) =>
                   `header__point ${isActive && "header__point_active_on"}`
@@ -20,7 +20,7 @@ export const Header: FC = () => {
                 key={i}
                 to={`/${item.link}`}
               >
-                {item.text}
+                {item.text.toUpperCase()}
               </NavLink>
             </li>
           ))}

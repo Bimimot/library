@@ -21,22 +21,43 @@
         display: flex;
         position: relative;
         list-style-type: none;
-        gap: 1rem;
+        gap: 1.5rem;
     }
 
     &__point {
+        position: relative;
         font-size: 1rem;
         text-decoration: none;
         color: var(--colorText);
-        transition: all .3s ease;
-        
-        &_active_on {
-            border-bottom: 2px solid $color-green;
+        letter-spacing: 0.1rem;
+        transition: all 0.2s ease;
+
+        &::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: -0.2rem;
+            height: 1px;
+            width: 0;
+            border-bottom: 2px solid;
+            transition: width 0.2s ease;
         }
 
         &:hover {
             cursor: pointer;
-            color: $color-green;
+            color: $color-primary;
+        }
+
+        &_active_on {
+            color: var(--colorText);
+            text-shadow: var(--colorText) 0.3px 0.3px;
+            &:hover {
+                cursor: default;
+                color: var(--colorText);
+            }
+            &::after {
+                width: 100%;
+            }
         }
     }
 }
