@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { BookCard } from "../../custom";
 
+import { TBook } from "../../../types";
+import { loadBooks } from "../../../helpers/mock-api";
+
 export const Books = (props: any) => {
   const [books, setBooks] = useState<TBook[]>([]);
 
@@ -8,27 +11,11 @@ export const Books = (props: any) => {
     loadBooks.then((res) => setBooks(res));
   }, []);
   return (
-    <>
+    <article className="books">
       <h1>BOOKS!</h1>
       {!!books.length
         ? books.map((book, i) => <BookCard key={i} book={book} />)
         : "Loading ..."}
-    </>
+    </article>
   );
 };
-
-const booksArr = [
-  { title: "BIBLE", description: "Aaaaaaaaaaaaaaa" },
-  { title: "Comics", description: "CCCCCCCCcccccc" },
-];
-
-const loadBooks = new Promise<TBook[]>((resolve) =>
-  setTimeout(() => {
-    resolve(booksArr);
-  }, 2000)
-);
-
-type TBook = {
-    title: string,
-    description: string
-}

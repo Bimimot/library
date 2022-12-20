@@ -1,0 +1,27 @@
+.books{
+    display: flex;
+    position: relative;
+    gap: 1rem;
+}
+
+.book {
+    display: flex;
+    position: relative;
+    height: 20rem;
+    width: 20rem;
+    border: 1px solid red;
+    box-shadow: 0 17px 58px -16px rgba(var(--colorText),.1);
+    border-radius: 3px;
+
+    &__title{
+
+    }
+
+    &__image{
+
+    }
+
+    &__desc {
+        
+    }
+}

@@ -3,12 +3,15 @@ import { NavLink } from "react-router-dom";
 import { Slider } from "./slider";
 import StyleTheme from "../../../helpers/StyleTheme";
 import { pages } from "../../../data/composition";
+import { Logo } from "./logo";
+
 
 const styleTheme = new StyleTheme("LIGHT");
 
 export const Header: FC = () => {
   return (
     <div className="header">
+      <Logo />
       <nav className="header__nav">
         <ul className="header__list">
           {pages.map((item, i) => (

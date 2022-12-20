@@ -3,15 +3,13 @@ $themes: (
     "colors": (
       "colorBackground": $color-white,
       "colorText": $color-black,
-      "colorPrimary": $color-green,
       "colorBorder": $color-grey,
     ),
   ),
   "dark": (
     "colors": (
       "colorBackground": $color-black,
-      "colorText": $color-white,
-      "colorPrimary": $color-green,      
+      "colorText": $color-white,      
       "colorBorder": $color-darkGrey,
     ),
   ),
