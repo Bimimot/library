@@ -2,15 +2,15 @@ $themes: (
   "light": (
     "colors": (
       "colorBackground": $color-white,
-      "colorText": $color-black,
-      "colorBorder": $color-grey,
+      "colorText": $color-black,  
+      "colorBorder": $color-grey
     ),
   ),
   "dark": (
     "colors": (
       "colorBackground": $color-black,
       "colorText": $color-white,      
-      "colorBorder": $color-darkGrey,
+      "colorBorder": $color-greyDark
     ),
   ),
 );

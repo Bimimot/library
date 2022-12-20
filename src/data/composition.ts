@@ -1,11 +1,13 @@
+import { TIconSvgName } from "../components/icons/SvgIcon";
 
 
-const pages = [
+const pages: HeaderPoint[] = [
 
-    { link: "books", text: "Книги", fetch: "" },
-    { link: "rules", text: "Правила и стоимость", fetch: "" },
-    { link: "about", text: "О проекте", fetch: "" }
+    { link: "books", icon: "books", text: "Книги", fetch: "" },
+    { link: "rules", icon: "about", text: "Правила и стоимость", fetch: "" },
+    { link: "about", icon: "rules", text: "О проекте", fetch: "" }
 ];
+
 
 
 export {
@@ -13,3 +15,9 @@ export {
 }
 
 
+type HeaderPoint = {
+    link: string,
+    icon: TIconSvgName,
+    text: string,
+    fetch: string
+}

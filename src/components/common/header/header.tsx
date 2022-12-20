@@ -4,7 +4,7 @@ import { Slider } from "./slider";
 import StyleTheme from "../../../helpers/StyleTheme";
 import { pages } from "../../../data/composition";
 import { Logo } from "./logo";
-
+import SvgIcon from "../../icons/SvgIcon";
 
 const styleTheme = new StyleTheme("LIGHT");
 
@@ -12,22 +12,7 @@ export const Header: FC = () => {
   return (
     <div className="header">
       <Logo />
-      <nav className="header__nav">
-        <ul className="header__list">
-          {pages.map((item, i) => (
-            <li className="" key={i}>
-              <NavLink
-                className={({ isActive }) =>
-                  `header__point ${isActive && "header__point_active_on"}`
-                }
-                to={`/${item.link}`}
-              >
-                {item.text.toUpperCase()}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      <HeaderNav />
       <Slider
         isOn={styleTheme.currentTheme === "DARK"}
         callback={(mode: boolean) =>
@@ -37,3 +22,23 @@ export const Header: FC = () => {
     </div>
   );
 };
+
+const HeaderNav = () => (
+  <nav className="header__nav">
+    <ul className="header__list">
+      {pages.map((item, i) => (
+        <li className="header__point" key={i}>
+          <NavLink
+            className={({ isActive }) =>
+              `header__link ${isActive && "header__link_active_on"}`
+            }
+            to={`/${item.link}`}
+          >
+            <SvgIcon name={item.icon} />
+            <span className="header__text">{item.text.toUpperCase()}</span>
+          </NavLink>
+        </li>
+      ))}
+    </ul>
+  </nav>
+);

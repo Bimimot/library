@@ -10,9 +10,10 @@
     transition: color, background-color, 0.6s ease;
     z-index: 500;
     border-bottom: 1px solid var(--colorBorder);
-    
+    padding: 0.5rem 0;
+
     &__logo {
-        width: 3rem;
+        width: 5rem;
     }
 
     &__nav {
@@ -26,16 +27,25 @@
         display: flex;
         position: relative;
         list-style-type: none;
-        gap: 1.5rem;
+        gap: 2rem;
         padding: 0;
     }
 
     &__point {
+    }
+
+    &__text {
+    }
+
+    &__link {
         position: relative;
+        display: flex;
+        align-items: flex-end;
+        gap: 0.3rem;
         font-size: 1rem;
         text-decoration: none;
         color: var(--colorText);
-        letter-spacing: 0.1rem;
+        letter-spacing: 0.05rem;
         transition: all 0.2s ease;
 
         &::after {
@@ -44,14 +54,20 @@
             left: 0;
             bottom: -0.2rem;
             height: 1px;
-            width: 0;
-            border-bottom: 2px solid;
-            transition: width 0.2s ease;
+        }
+
+        & svg {
+            opacity: 0;
+            transition: opacity 0.2s ease;
         }
 
         &:hover {
             cursor: pointer;
-            color: $color-primaryLight;
+            color: $color-primary;
+
+            & svg {
+                opacity: 1;
+            }
         }
 
         &_active_on {
@@ -61,8 +77,9 @@
                 cursor: default;
                 color: var(--colorText);
             }
-            &::after {
-                width: 100%;
+
+            & svg {
+                opacity: 1;
             }
         }
     }
