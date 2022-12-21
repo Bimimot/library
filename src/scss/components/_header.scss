@@ -47,38 +47,20 @@
         color: var(--colorText);
         letter-spacing: 0.05rem;
         transition: all 0.2s ease;
+        border-radius: .25rem;
+        padding: .25rem;
 
-        &::after {
-            position: absolute;
-            content: "";
-            left: 0;
-            bottom: -0.2rem;
-            height: 1px;
-        }
-
-        & svg {
-            opacity: 0;
-            transition: opacity 0.2s ease;
-        }
 
         &:hover {
             cursor: pointer;
-            color: $color-primary;
-
-            & svg {
-                opacity: 1;
-            }
+            opacity: .7;      
         }
 
         &_active_on {
-            color: var(--colorText);
-            text-shadow: var(--colorText) 0.3px 0.3px;
+            color:  $color-primary;
+            text-shadow: $color-primary 0.3px 0.3px;
             &:hover {
                 cursor: default;
-                color: var(--colorText);
-            }
-
-            & svg {
                 opacity: 1;
             }
         }
