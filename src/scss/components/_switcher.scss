@@ -1,0 +1,57 @@
+$swicher-size: 2.5rem;
+$radius-wheel: $swicher-size;
+
+.switcher {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: $swicher-size;
+    height: $swicher-size;
+    border-radius: 50%;
+    margin: 100px auto;
+    overflow: hidden;
+    margin: 0;
+    background-color: var(--colorBackgroundGrey);
+
+    &__wheel {
+        position: relative;
+        display: flex;
+        top: 50%;
+        justify-content: center;
+        align-items: center;
+        min-width: $radius-wheel * 2;
+        min-height: $radius-wheel * 2;
+        border-radius: 50%;
+        transition: all 0.5s ease-out;
+        
+    }
+
+    &__icon {
+        position: absolute;
+        transform: translate(0, -$radius-wheel);
+        color: $color-warning;
+        transition: all 0.5s ease-out;
+        width: 2rem;
+        height: 2rem;
+
+        &:nth-child(2) {
+            transform: translate(calc(cos(30deg) * #{$radius-wheel}), -0.5 * $radius-wheel) rotate(-60deg);
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &_mode_dark {
+        & .switcher__wheel {
+            transform: rotate(-60deg);
+        }
+    }
+
+    &_mode_light {
+        & .switcher__wheel {
+            transform: rotate(0deg);
+        }
+    }
+}
