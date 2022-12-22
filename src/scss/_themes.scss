@@ -2,17 +2,17 @@ $themes: (
   "light": (
     "colors": (
       "colorBackground": $color-white,
-      "colorText": $color-black,
-      "colorPrimary": $color-green,
-      "colorBorder": $color-grey,
+      "colorBackgroundGrey": $color-greyLight,
+      "colorText": $color-black,  
+      "colorBorder": $color-grey
     ),
   ),
   "dark": (
     "colors": (
       "colorBackground": $color-black,
-      "colorText": $color-white,
-      "colorPrimary": $color-green,      
-      "colorBorder": $color-darkGrey,
+      "colorBackgroundGrey": $color-greyDark,
+      "colorText": $color-white,      
+      "colorBorder": $color-greyDark
     ),
   ),
 );
