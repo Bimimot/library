@@ -3,10 +3,10 @@ import { TBook } from "../types";
 export const loadBooks = new Promise<TBook[]>((resolve) =>
     setTimeout(() => {
         resolve(booksArr);
-    }, 2000)
+    }, 1000)
 );
 
 const booksArr = [
-    { title: "BIBLE", description: "Aaaaaaaaaaaaaaa" },
-    { title: "Comics", description: "CCCCCCCCcccccc" },
+    { title: "Aaaaaaaaaaaaaaa и его невероятные приключения на невиданной планете", description: "Aaaaaaaaaaaaaaa и его невероятные приключения на невиданной планете", author: "Potap Nepsov" },
+    { title: "Comics", description: "CCCCCCCCcccccc", author: "Амбросий Иванович Крузенштерн" },
 ];
