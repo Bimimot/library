@@ -4,7 +4,7 @@ $themes: (
       "colorBackground": $color-white,
       "colorBackgroundGrey": $color-greyLight,
       "colorText": $color-black,  
-      "colorBorder": $color-grey
+      "colorAccent": $color-grey
     ),
   ),
   "dark": (
@@ -12,7 +12,7 @@ $themes: (
       "colorBackground": $color-black,
       "colorBackgroundGrey": $color-greyDark,
       "colorText": $color-white,      
-      "colorBorder": $color-greyDark
+      "colorAccent": $color-greyDark
     ),
   ),
 );

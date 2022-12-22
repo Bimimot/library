@@ -7,6 +7,6 @@ export const loadBooks = new Promise<TBook[]>((resolve) =>
 );
 
 const booksArr = [
-    { title: "Aaaaaaaaaaaaaaa и его невероятные приключения на невиданной планете", description: "Aaaaaaaaaaaaaaa и его невероятные приключения на невиданной планете", author: "Potap Nepsov" },
+    { title: "Aaaaaaaaaaaaaaa и его невероятные приключения на невиданной планете", description: "Aaaaaaaaaaaaaaa и его невероятные приключения на невиданной планете", author: "Potap Nepsov-Краль Стефан Первый" },
     { title: "Comics", description: "CCCCCCCCcccccc", author: "Амбросий Иванович Крузенштерн" },
 ];

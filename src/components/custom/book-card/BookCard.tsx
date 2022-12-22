@@ -9,8 +9,8 @@ export const BookCard = (props: any) => {
         alt="title"
       />
       <h5 className="book__text">{author}</h5>
-      <h4 className="book__text"> {title}</h4>
-      <button className="button">Внести в заявку</button>
+      <h4 className="book__text book__text_weight_bold"> {title}</h4>
+      <button className="button book__button">Отложить</button>
     </div>
   );
 };
