@@ -1,3 +1,4 @@
+import { faker } from '@faker-js/faker';
 import { TBook } from "../types";
 
 export const loadBooks = new Promise<TBook[]>((resolve) =>
@@ -6,7 +7,23 @@ export const loadBooks = new Promise<TBook[]>((resolve) =>
     }, 1000)
 );
 
-const booksArr = [
-    { title: "Aaaaaaaaaaaaaaa и его невероятные приключения на невиданной планете", description: "Aaaaaaaaaaaaaaa и его невероятные приключения на невиданной планете", author: "Potap Nepsov-Краль Стефан Первый" },
-    { title: "Comics", description: "CCCCCCCCcccccc", author: "Амбросий Иванович Крузенштерн" },
-];
+
+
+
+
+
+const booksArr: TBook[] = [];
+
+function createRandomBook(): TBook {
+    return {
+        author: faker.name.fullName(),
+        title: faker.company.catchPhrase(),
+        description: faker.lorem.paragraph(),
+        image: faker.image.image(400,620)
+    };
+}
+
+Array.from({ length: 10 }).forEach(() => {
+    booksArr.push(createRandomBook());
+});
+

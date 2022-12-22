@@ -1,6 +1,7 @@
 .books {
     display: flex;
     position: relative;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 
@@ -15,11 +16,11 @@
     border-radius: 0.5rem;
     padding: 1rem 0.5rem;
     box-sizing: border-box;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 
-    &:hover{
+    &:hover {
         cursor: pointer;
-        background-color: var(--colorAccent);
+        background-color: var(--colorBorder);
     }
 
     &__text {
@@ -52,15 +53,15 @@
         position: relative;
         margin-top: auto;
         color: $color-primary;
-        border: 2px solid $color-primary;
+        border-color: $color-primary;
         font-weight: bold;
-        transition: all .3s ease;
+        //transition: all 0.3s ease;
 
-        &:hover{
+        &:hover {
             cursor: pointer;
             color: $color-white;
-            border: 2px solid $color-primary;
-            background-color: $color-primary;
+            border-color: $color-primary;
+            background-color: $color-primary;                    
         }
     }
 }

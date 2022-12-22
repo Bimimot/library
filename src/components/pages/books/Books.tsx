@@ -12,7 +12,6 @@ export const Books = (props: any) => {
   }, []);
   return (
     <article className="books">
-      <h1>BOOKS!</h1>
       {!!books.length
         ? books.map((book, i) => <BookCard key={i} book={book} />)
         : "Loading ..."}
