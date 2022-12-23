@@ -1,13 +1,13 @@
-$swicher-size: 2.5rem;
-$radius-wheel: $swicher-size;
+$switcher-size: 2rem;
+$radius-wheel: $switcher-size;
 
 .switcher {
     position: relative;
     display: flex;
     justify-content: center;
     margin: 0;
-    width: $swicher-size;
-    height: $swicher-size;
+    width: $switcher-size;
+    height: $switcher-size;
     border-radius: 50%;
     overflow: hidden;
     background-color: var(--colorBackgroundGrey);
@@ -29,8 +29,8 @@ $radius-wheel: $swicher-size;
         position: absolute;
         transform: translate(0, -$radius-wheel);
         color: $color-warning;
-        width: 2rem;
-        height: 2rem;
+        width: $switcher-size * .8;
+        height: $switcher-size * .8;
 
         &:nth-child(2) {
             transform: translate(calc(cos(30deg) * #{$radius-wheel}), -0.5 * $radius-wheel) rotate(-60deg);
