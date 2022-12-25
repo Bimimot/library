@@ -3,12 +3,16 @@ import { TBook } from "../types";
 const baseUrl = 'http://localhost:3010';
 
 
-function api<T>(url: string): Promise<T> {
-    return fetch(`${baseUrl}/${url}`)
-        .then(response => response.ok
-            ? response.json() as Promise<T>
-            : Promise.reject(response.statusText))
-}
+// async function api<T>(url: string) {
+//     const response = await fetch(`${baseUrl}/${url}`)
+//         .then(res => res.json())
+//         .catch(err => { throw err });
+//     return response
+// }
+    
 
 
-export const loadBooks = api<TBook[]>("books");
+// export const loadBooks = api<TBook[]>("books");
+
+
+export const loadBooks = () => fetch(`${baseUrl}/books`);
