@@ -4,6 +4,7 @@ import Rules from "./icons-svg/IconRules";
 import About from "./icons-svg/IconAbout";
 import Sun from "./icons-svg/IconSun";
 import Moon from "./icons-svg/IconMoon";
+import Loader from "./icons-svg/IconLoader";
 
 const componentsLib= {
   books: Books,
@@ -11,6 +12,7 @@ const componentsLib= {
   rules: Rules,
   sun: Sun,
   moon: Moon,
+  loader: Loader
 };
 
 const SvgIcon = React.memo((props: TIconSvg) => {
