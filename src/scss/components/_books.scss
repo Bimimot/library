@@ -51,8 +51,9 @@
     }
 
     &__image {
-        max-width: 100%;
+        width: 70%;
         height: 60%;
+        object-fit: cover;
     }
 
     &__button {
@@ -71,3 +72,5 @@
         }
     }
 }
+
+
