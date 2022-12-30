@@ -36,7 +36,7 @@ const ProgressiveImg = (props: TImage) => {
   return (
     <>
       {image.isLoaded && <img src={image.src} alt="" className={className} />}
-      {image.isLoading && <div className="back-gradient"> </div>}
+      {image.isLoading && <div className={`${className} back-gradient`}> </div>}
       {image.isError && <img src={defaultSrc} alt="" className={className} />}
     </>
   );

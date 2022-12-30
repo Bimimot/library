@@ -33,16 +33,17 @@ body {
 }
 
 .back-gradient {
-    border: none;
-    outline: none;
-    animation: back-gradient ease-in-out 1s infinite alternate;
+    width: inherit;
+    height: inherit;
+    background-color: $color-primary;
+    animation: fog 1s ease infinite alternate;
 }
 
-@keyframes back-gradient {
+@keyframes fog {
     0% {
-        background: $color-primaryLight;
+        opacity: 100%;
     }
     100% {
-        background: $color-primaryDark;
+        opacity: 50%;
     }
 }
