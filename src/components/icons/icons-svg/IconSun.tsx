@@ -1,4 +1,4 @@
-const SVG = ({ size = "2rem", color = false }) => (
+const SVG = ({ size = "1.6rem", color = false }) => (
   <svg
     width={size}
     height={size}

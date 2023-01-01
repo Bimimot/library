@@ -24,3 +24,26 @@ body {
     object-fit: cover;
 }
 
+.loader {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    color: $color-primary;
+}
+
+.back-gradient {
+    width: inherit;
+    height: inherit;
+    background-color: $color-primary;
+    animation: fog 1s ease infinite alternate;
+}
+
+@keyframes fog {
+    0% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 50%;
+    }
+}
