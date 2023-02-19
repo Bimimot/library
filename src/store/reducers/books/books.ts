@@ -39,10 +39,10 @@ const booksSlice = createSlice({
             state.isLoaded = false;
 
         },
-        [getBooks.fulfilled.toString()]: (state: TBooksSlice, action: PayloadAction<Array<TBook>>) => {
+        [getBooks.fulfilled.toString()]: (state: TBooksSlice, action: PayloadAction<{books: Array<TBook>}>) => {
             state.isLoading = false;
             state.isLoaded = true;
-            state.items = action.payload;
+            state.items = action.payload.books;
         }
     }
 });
