@@ -1,6 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import { Layout } from "../common";
-import { Books, About, Rules, Page404 } from "../pages";
+import { Layout } from "./components";
+import { Books, About, Rules, Page404 } from "./pages/";
 
 const App = () => {
   return (

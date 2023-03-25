@@ -1,6 +1,6 @@
 import { useState, useCallback, memo } from "react";
-import StyleTheme from "../../../helpers/StyleTheme";
-import SvgIcon from "../../icons/SvgIcon";
+import StyleTheme from "../../helpers/StyleTheme";
+import { SvgIcon } from "../";
 
 const styleTheme = new StyleTheme("LIGHT");
 

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { TApiAnswer } from "../../../types";
+import { TApiAnswer } from "../../types";
 
 const defaultSrc = "";
 

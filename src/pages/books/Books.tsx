@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from '../../../store/types/hook-types';
-import { getBooks } from "../../../store/reducers/books/books";
-import { BookCard } from "../../custom";
-import { Loader } from "../../common/loader/loader";
+import { useDispatch, useSelector } from '../../store/types/hook-types';
+import { getBooks } from "../../store/reducers/books/books";
+import { BookCard, Loader } from "../../components/index";
 
 export const Books = (props: any) => {
   const dispatch = useDispatch();

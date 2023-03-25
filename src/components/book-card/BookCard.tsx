@@ -1,4 +1,4 @@
-import ProgressiveImg from "../../common/image/progressive-image";
+import { ProgressiveImg } from "../";
 
 export const BookCard = (props: any) => {
   const { title, author, image } = props.book;
